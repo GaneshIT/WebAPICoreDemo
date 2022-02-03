@@ -1,0 +1,38 @@
+﻿@model IEnumerable<TutorialCoreApp.Models.Tutorial>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+
+<h1>Tutorial Details</h1>
+<hr />
+<div>
+    <a asp-controller="Tutorial" asp-action="InsertTutorial">Tutorial Entry</a>
+</div>
+<hr />
+<table>
+    <thead>
+    <tr>
+        <th>TutorialId</th>
+        <th>TutorialName</th>
+        <th>TutorialDesc</th>
+        <th>Published</th>
+        <th>TutorialFees</th>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.TutorialId</td>
+            <td>@item.TutorialName</td>
+            <td>@item.TutorialDesc</td>
+            <td>@item.Published</td>
+            <td>@item.TutorialFees</td>
+        </tr>
+        }
+    </tbody>
+</table>

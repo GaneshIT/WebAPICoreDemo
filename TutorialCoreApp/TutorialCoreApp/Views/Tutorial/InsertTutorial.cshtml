@@ -1,0 +1,20 @@
+﻿@model TutorialCoreApp.Models.Tutorial
+
+<div>
+<a asp-controller="Tutorial" asp-action="Index">View Tutorials</a>
+</div>
+<hr />
+<form method="post">
+    <table>
+        <tr><td>Tutorial Id</td><td><input type="text" asp-for="TutorialId" value="" /></td></tr>
+        <tr><td>Tutorial Name</td><td><input type="text" asp-for="TutorialName" value="" /></td></tr>
+        <tr><td>Description</td><td><input type="text" asp-for="TutorialDesc" value="" /></td></tr>
+        <tr><td>Published</td><td><input type="text" asp-for="Published" value="" /></td></tr>
+        <tr><td>Tutorial Fees</td><td><input type="text" asp-for="TutorialFees" value="" /></td></tr>
+        <tr><td></td><td><input type="submit" value="Save" /></td></tr>
+    </table>
+    <hr />
+    <div>
+        <h2>@ViewBag.message</h2>
+    </div>
+</form>
